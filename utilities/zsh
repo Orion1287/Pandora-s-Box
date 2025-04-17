@@ -1,0 +1,22 @@
+#!/bin/bash
+
+ZSH_PATH=$(which zsh)
+echo "Changing shell to: $ZSH_PATH"
+chsh -s $ZSH_PATH $(whoami)
+
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+    rm -rf "$HOME/.oh-my-zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
+else
+    echo "Oh My Zsh is already installed."
+fi
+
+#bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+
+#ksource "${HOME}/.zinit/bin/zinit.zsh"
+#zinit self-update
+
+#   source $HOME/.zshrc
+
+echo "Zsh installation and setup complete. Restart your terminal or type 'zsh' to start using it."
+
