@@ -22,8 +22,8 @@ EOF
 clear
 print_logo
 
-# Exit on any error
-#set -e
+#Exit on any error
+set -e
 
 # Source utility functions
 source ./utilities/utils.sh
@@ -68,18 +68,18 @@ echo "Setting up ZSH"
 source ./utilities/zsh
 #./utilities/zsh
 
-echo "SSH"
-source ./utilities/ssh.sh restore
+#   echo "SSH"
+#source ./utilities/ssh.sh restore
 echo "Setting up git"
 source ./utilities/git
 #./utilities/git
 
 echo "Copying Configuration"
-source ./utilities/dev-env
+source ./utilities/dotfiles.sh
 #./utilities/dev-env
 
 echo "Setting up DWM"
-source ./utilities/dwm
+source ~/pandoras-box/utilities/dwm.sh
 #./utilities/dwm
 
 
