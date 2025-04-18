@@ -68,6 +68,8 @@ echo "Setting up ZSH"
 source ./utilities/zsh
 #./utilities/zsh
 
+echo "SSH"
+source ./utilities/ssh.sh restore
 echo "Setting up git"
 source ./utilities/git
 #./utilities/git
