@@ -34,6 +34,7 @@ if [ $? -eq 0 ]; then
   stow bat
   stow gtk-4.0
   stow wallpapers
+  stow zsh-profile
 else
   echo "Failed to clone the repository."
   exit 1
