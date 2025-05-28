@@ -43,7 +43,7 @@ if ! command -v yay &> /dev/null; then
   sudo pacman -S --needed git base-devel --noconfirm
   git clone https://aur.archlinux.org/yay.git
   cd yay
-  echo "building yay.... yaaaaayyyyy"
+  echo "building yay"
   makepkg -si --noconfirm
   cd ..
   rm -rf yay
@@ -73,13 +73,13 @@ source ./utilities/zsh
 echo "Setting up git"
 source ./utilities/git
 #./utilities/git
-
+rm ~/.zshrc
 echo "Copying Configuration"
 source ./utilities/dotfiles.sh
 #./utilities/dev-env
 
-echo "Setting up DWM"
-source ~/pandoras-box/utilities/dwm.sh
+#echo "Setting up DWM"
+#source ~/pandoras-box/utilities/dwm.sh
 #./utilities/dwm
 
 
