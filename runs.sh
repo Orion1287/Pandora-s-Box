@@ -23,7 +23,7 @@ clear
 print_logo
 
 #Exit on any error
-set -e
+#set -e
 
 # Source utility functions
 source ./utilities/utils.sh
@@ -65,17 +65,17 @@ echo "Installing flatpaks (like discord and spotify)"
 ./utilities/install-flatpaks.sh
 
 echo "Setting up ZSH"
-source ./utilities/zsh
+./utilities/zsh
 #./utilities/zsh
 
 #   echo "SSH"
 #source ./utilities/ssh.sh restore
 echo "Setting up git"
-source ./utilities/git
+./utilities/git
 #./utilities/git
 rm ~/.zshrc
 echo "Copying Configuration"
-source ./utilities/dotfiles.sh
+./utilities/dotfiles.sh
 #./utilities/dev-env
 
 #echo "Setting up DWM"

@@ -6,7 +6,7 @@ chsh -s $ZSH_PATH $(whoami)
 
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
     rm -rf "$HOME/.oh-my-zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended > /dev/null
 else
     echo "Oh My Zsh is already installed."
 fi
