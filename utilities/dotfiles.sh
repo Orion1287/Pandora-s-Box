@@ -27,6 +27,9 @@ fi
 if [ $? -eq 0 ]; then
   cd "$REPO_NAME"
   stow zsh
+  stow xinitrc
+  stow dev-commit
+  stow zsh
   stow ghostty
   stow nvim
   stow tmux
