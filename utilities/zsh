@@ -1,12 +1,13 @@
 #!/bin/bash
 
+REPO_NAME="dotfiles"
 ZSH_PATH=$(which zsh)
 echo "Changing shell to: $ZSH_PATH"
-chsh -s $ZSH_PATH $(whoami)
+chsh -s "$ZSH_PATH"
 
 if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
     rm -rf "$HOME/.oh-my-zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended > /dev/null
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended
 else
     echo "Oh My Zsh is already installed."
 fi
@@ -17,7 +18,23 @@ git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/p
 #ksource "${HOME}/.zinit/bin/zinit.zsh"
 #zinit self-update
 
-#   source $HOME/.zshrc
+
+cd ~
+rm -rf .zshrc
+rm -rf .zsh_profile
+cd "$REPO_NAME"
+stow zsh
+ # stow xinitrc
+  #stow dev-commit
+ # stow zsh
+  #stow ghostty
+  #stow nvim
+  #stow tmux
+  #stow tmux-sessionizer
+  #stow bat
+  #stow gtk-4.0
+  #stow wallpapers
+stow zsh-profile
 
 echo "Zsh installation and setup complete. Restart your terminal or type 'zsh' to start using it."
 

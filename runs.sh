@@ -64,8 +64,8 @@ install_packages "${FONTS[@]}"
 echo "Installing flatpaks (like discord and spotify)"
 ./utilities/install-flatpaks.sh
 
-echo "Setting up ZSH"
-./utilities/zsh
+#echo "Setting up ZSH"
+#./utilities/zsh
 #./utilities/zsh
 
 #   echo "SSH"
